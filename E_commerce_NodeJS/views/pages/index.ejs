@@ -1,0 +1,24 @@
+<%- include('jsView/functions.js') -%>
+<%- include ('header') -%>
+
+<%
+if (locals.tabs) {
+    if(tabs == 'testhref'){
+        %><%-include ('login')-%><%}
+    else if(tabs == 'meuble'){
+        %><%-include ('meuble')-%><%}
+    else if(tabs == 'profile'){
+        %><%-include ('profile')-%><%}
+    else if(tabs == 'shop'){
+        %><%-include ('shop')-%><%}
+    else if(tabs == 'administration'){
+    %><%-include ('administration')-%><%}
+}
+else {
+        %><%- include('acceuil') -%><%
+}
+
+
+
+ %><%-include ('footer') -%>
+

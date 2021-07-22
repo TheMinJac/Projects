@@ -1,0 +1,789 @@
+:root{
+	--Image_Fond: url("Images/Fond_Menu.jpg");
+
+	--Couleur_Principal:  white;
+	--Couleur_Secondaire: #a4b0be;
+	--Couleur_Tertiaire: #fbc531;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Police/Roboto/Roboto-Light.OTF') format('opentype');
+    font-weight: 400;
+}
+
+.Vertical
+{ 
+	display: flex;
+	justify-content: center;	
+}
+
+.Horizontal
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+
+/*Style Index*/
+.Page_Principal{
+		font-family: 'Montserrat', sans-serif;
+		
+		background-image: var(--Image_Fond);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		
+		overflow-x: hidden; 
+		
+		color: var(--Couleur_Principal);
+		
+		margin: 0px;
+}
+
+
+.Principal_haut_page
+{	
+	height: 100vh;
+}
+.Principal_menu
+{
+	display: flex;
+
+	background-position: center;	
+}
+
+.Principal_menu_Gauche
+{
+	position: fixed;
+	top : 5%;
+	left: 5vw;
+}
+
+.Principal_menu_Milieu
+{
+	display: flex;
+    justify-content: space-between;
+	
+	position: absolute;
+	top : 5%;
+	left: 45vw;
+}
+
+.Principal_menu_Droite
+{
+	display: flex;
+    justify-content: space-between;
+	
+	position: absolute;
+	top : 5%;
+	left: 92vw;
+}
+
+.Principal_Bouton_Menu
+{
+	margin-right: 20px;
+}
+.Principal_Haut_NomEntreprise
+{
+	position: relative;
+	top: 200px;
+	text-align: center;
+	
+	font-size: 150px;
+}
+.Principal_Haut_Devise
+{
+	position: relative;
+	top: 10px;
+	text-align: center;
+	
+	font-size: 35px;
+	
+	color: var(--Couleur_Secondaire);
+}
+.Principal_Haut_Fleche_Bas
+{
+	position: relative;
+	bottom: -30vh;
+	animation: AnimationHautBAS 2s infinite;
+	text-align: center;
+}
+.Principal_logo
+{
+	Width : 100px;
+	Height: auto;
+}
+.Principal_Image_Site_Exemple
+{
+	margin-left: 50px;
+	Width : 200px;
+	Height: auto;
+}
+#Principal_Site_Exemple
+{
+	justify-content: center;
+}
+#Principal_Site_Exemple a:link
+{
+	text-decoration:none; 
+}
+
+.Principal_logo_fin
+{
+	Width : 100px;
+	Height: auto;
+}
+.Principal_photo
+{
+	Width : 350px;
+	Height: auto;
+	-webkit-border-radius:300px;
+    -moz-border-radius:300px;
+    border-radius:300px;
+		
+	background-color: #f5f6fa;
+	animation: AnimationCouleur 5s infinite;
+}
+
+.Principal_icon
+{
+	Width : 150px;
+	Height: auto;
+}
+.Principal_Fleche
+{
+	Width : 50px;
+	Height: auto;
+}
+
+.Principal_menu a
+{
+    font-size: 15px;
+    color: var(--Couleur_Principal);
+    padding-bottom: 3px;
+    text-decoration: none;
+	
+	font-weight: bold;
+	
+	display: inline;
+}
+
+
+.Principal_Bouton::after  {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 165px; 
+	height: 3px;
+	background: var(--Couleur_Principal);
+	
+	transform: scale(0);
+	transition: transform 0.2s ease-in-out;
+}
+.Principal_Bouton:hover::after
+{
+	transform: scale(1);
+}
+
+.Principal_Bouton_Contact::after  {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 75px; 
+	height: 3px;
+	background: var(--Couleur_Principal);
+	
+	transform: scale(0);
+	transition: transform 0.2s ease-in-out;
+}
+.Principal_Bouton_Contact:hover::after
+{
+	transform: scale(1);
+}
+
+.Principal_Bouton_Grand::after  {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 195px; 
+	height: 3px;
+	background: var(--Couleur_Principal);
+	
+	transform: scale(0);
+	transition: transform 0.2s ease-in-out;
+}
+.Principal_Bouton_Grand:hover::after
+{
+	transform: scale(1);
+}
+
+.Principal_Contenu_Site
+{
+	width: 99.15vw; 
+	height: 100vh;
+}
+.Principal_Fond_Article
+{
+	background-color: var(--Couleur_Principal)
+}
+.Principal_Titre_Article
+{
+	font-size: 35px;
+	text-align: center;
+	color:  var(--Couleur_Secondaire);
+	
+}
+.Principal_Titre_Article_2
+{
+	color:  var(--Couleur_Tertiaire);
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+.Principal_Texte_Article
+{
+	text-align: center;
+	
+	color: black;
+}
+
+.Principal_Contenu_Tableau_Vertical
+{
+	padding-left: 50px;
+	color:  black;
+}
+
+.Principal_alignement
+{
+	color: black;
+	text-align: center;
+	align-items: center;
+}
+
+.Principal_Bas_Site
+{
+	width: 100%;
+	position: absolute;
+	background-color: black;
+	text-align: center;
+}
+
+/*Style CV*/
+.CV_bouton_Perso{
+	height: 80%;
+	width: 30vw;
+
+	background-color: var(--Couleur_Secondaire);
+	color: var(--Couleur_Tertiaire);
+
+	border: black solid 1px;
+
+	text-align: center;
+	font-size: 40px;
+}
+.CV_bouton_Perso:hover{
+	background-color: black;
+	color: var(--Couleur_Principal);
+}
+.CV_buton:link{
+	text-decoration: none;
+}
+.CV_grande_photo{
+	Width : 600px;
+	Height: auto;
+
+	-webkit-border-radius:600px;
+    -moz-border-radius:600px;
+	border-radius:600px;
+
+	padding-top: 10%;
+}
+
+.CV_Page {
+    background-color: white;
+    width: 1000px;
+    border: 1px solid;
+    margin: auto;
+}
+.CV_PageJB{
+	background-color: white;
+    width: 1000px;
+    border: 1px solid;
+    margin: auto;
+
+	font-family: 'Roboto';
+}
+
+.CV_Tableau{
+    border-spacing: 30px 0px;
+}
+.CV_Tableau_1{
+    border-spacing: 10px 0px;
+}
+.CV_TD{
+    font-size: 25px;
+}
+.CV_Vertical {
+    display: flex;
+}
+.CV_Vertical_Contenu{
+    margin-left: 35px;
+}
+
+.CV_Gauche {
+    width: 41%;
+    background-color: #002e54;
+    color: white;
+}
+
+.CV_Droite {
+    width: 59%;
+}
+
+.CV_img {
+    width: 15vw;
+    height: auto;
+}
+
+.CV_img_titre_1 {
+    width: 60px;
+    height: auto;
+}
+.CV_img_titre_2 {
+    width: 40px;
+    height: auto;
+}
+.CV_img_titre_3 {
+    width: 80px;
+    height: auto;
+}
+.CV_img_titre_4 {
+    width: 65px;
+    height: auto;
+}
+.CV_Espace_Image{
+    width: 90px;
+    background-color: black;
+}
+.CV_police_Gauche {
+    font-size: 30px;
+}
+
+.CV_police_info {
+    margin-left: 10px;
+    line-height: 10px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.CV_petit_Gauche {
+    font-size: 17px;
+}
+
+
+.CV_titre {
+    width: 100%;
+    Padding-top: 10px;
+    Padding-bottom: 10px;
+    word-wrap: break-word;
+    line-height: 30px;
+    background-color: #000b22;
+    font-size: 30px;
+}
+
+.CV_Formation{
+    border-spacing: 10px 0px;
+    font-size: 15px;
+	color: black;
+}
+
+.CV_orange{
+    color:#ed7d31;
+}
+
+.CV_Formation_ligne{
+    background-image: url("Images/CV/HFormationS.png");
+    background-repeat: repeat-y;
+    background-origin: content-box;
+}
+
+.CV_Experience{
+    border-spacing: 10px 0px;
+    font-size: 15px;
+	color: black;
+}
+
+.CV_bleu{
+    color:#5b9bd5;
+}
+.CV_Experience_ligne{
+    background-image: url("Images/CV/HExperienceS.png");
+    background-repeat: repeat-y;
+    background-origin: content-box;
+}
+.CV_logo_gauche
+{
+	margin-left: 80%;
+	
+	width: 75px; 
+	height: 75px;
+}
+
+.CV_Seperateur
+{	
+	width: 400px; 
+	height: 3px;
+}
+
+.CV_Description {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+
+    text-align: center;
+    color: white;
+}
+
+.CV_Lien_1:link{
+    color: #95afc0;
+}
+.CV_Lien_1:visited{
+    color: #95afc0;
+}
+
+.CV_Lien_2:link{
+    color: #535c68;
+}
+.CV_Lien_2:visited{
+    color: #535c68;
+}
+
+.CV_JB_Point{
+	display: flex; 
+	flex-direction: reverse;
+}
+
+.CV_JB_Point_Blanc{
+	Width : 10px;
+	Height: 10px;
+
+	background-color: white ; 
+	border-radius: 50%;
+	margin-left: 5px;
+}
+.CV_JB_Point_Vert{
+	Width : 10px;
+	Height: 10px;
+	
+	background-color: #2dc0b2 ; 
+	border-radius: 50%;
+	margin-left: 5px;
+}
+
+.CV_JB_Haut{
+	justify-content:space-between; 
+	 color:white;
+}
+.CV_JB_Haut_Logo{
+	
+	Width : 20px;
+	Height: auto;
+
+	background-color: #58595b;
+
+	-webkit-border-radius:400px;
+	-moz-border-radius:400px;
+	border-radius:400px;
+}
+
+.CV_JB_Haut_Image{
+	Width : 250px;
+	Height: auto;
+
+	background-color: white;
+
+	-webkit-border-radius:400px;
+	-moz-border-radius:400px;
+	border-radius:400px;
+}
+
+
+
+.CV_JB_Gauche{
+	width: 50%;
+	
+	background-color: #58595b; 
+	color: white;
+	
+	border-radius: 0px 20% 0px 0px; 
+}
+.CV_JB_Gauche_Titre{
+	display: flex; 
+
+	flex-direction: row;
+	
+	margin-left: -50px;
+}
+.CV_JB_Gauche_ligne_vert{
+	width: 20px;
+	height: 100px;
+
+	margin-top: 35px;
+
+	background-color: #2dc0b2;
+
+}
+.CV_JB_Demi_cercle_blanc{
+	width: 250px;
+	height: 100px;
+
+	margin-top: 35px;
+	
+	background-color: #d1d3d4;
+	border-radius: 0% 100% 100% 0%;
+}
+
+
+.CV_JB_Droite{
+	width: 50%;
+}
+
+
+.CV_JB_TableInfo{
+	margin-top: 50px;
+	margin-left: 25px;
+}
+.CV_JB_Trai{
+	background: url(Images/CV/trai.png);
+	background-repeat: no-repeat;
+	background-size: 5px 1000px;
+	background-position: 25px 0px;
+
+}
+.CV_JB_Fond_Logo{
+	width: 70px;
+	height: auto;
+	
+	background-image: url(Images/CV/Fond_img.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-size: 55px 55px;
+
+}
+.CV_JB_Logo{
+	width: 50px;
+	height: auto;
+	
+	border-radius: 50%;
+
+}
+.CV_JB_Marge_1{
+	padding-top: 35px;
+
+}
+.CV_JB_Marge_2{
+	padding-top: 15px;
+
+}
+
+/*Style Vitrine*/
+.Vitrine{
+	width: 100%; 
+	height: 80vh;
+
+	font-size: 40px;
+}
+
+.Vitrine_Haut{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	
+	background-color: #1bc9d3; 
+	color: white; 
+	
+	text-align: center;
+
+	font-size: 22px;
+}
+
+.Vitrine_Part_1{
+	background: url(Images/Vitrine/Image_haut.jpg); 
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	color: white; 
+}
+.Vitrine_moitier{
+	width: 50%;
+}
+.Vitrine_moitier_gauche{
+	background-image: url(Images/Vitrine/Image_Portefolio.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.Vitrine_Email{
+	background-image: url(Images/Vitrine/Image_Email.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.Vitrine_QFN{
+	background-image: url(Images/Vitrine/Image_QFN.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	padding-top: 20%;
+}
+.Vitrine_Deroulement{
+	background-image: url(Images/Vitrine/Image_Code.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	padding-top: 20%;
+}
+.Vitrine_QFN_Text{
+	font-size: 30px;
+
+	text-align: center;
+	color: #073052;
+
+	background-color: rgba(255, 255, 255, 0.85);
+}
+.Vitrine_QFN_image{
+	width: 150px;
+	height: auto;
+}
+.Vitrine_Bas{
+	width: 100%; 
+
+	background-color: #1bc9d3;
+	color: white;
+
+	font-size: 40px;
+}
+.Vitrine_Bas a{
+	color: white;
+}
+
+.Vitrine_Bas_milieu{
+	padding-left: 25vw;
+}
+.Vitrine_Devise{
+
+	border-radius: 50%;
+
+	font-size: 100px;
+
+	margin-top: 550px;
+	margin-left: 300px;
+
+	padding-top: 40px;
+	padding-left: 80px;
+
+	
+}
+.Vitrine_PorteFolio_text{
+	width: 250px; 
+
+	margin: auto;
+	
+	color:#73c9cd;
+}
+.Vitrine_PorteFolio_bouton a{
+	width: 150px; 
+
+	padding-left: 10px;
+	padding-right: 10px;
+
+	background-color: #73c9cd;
+	color: white;
+}
+.Vitrine_PorteFolio_bouton a:link{
+	text-decoration: none;
+}
+.Vitrine_PorteFolio_bouton a:hover{
+	animation: AnimationCouleur_2 2s;
+	background-color: #073052;
+}
+.Vitrine_Email_Text{
+	width: 500px; 
+	
+	display: inline-block;
+
+	margin-top: 48vh;
+	margin-left:  35vw;
+
+	text-align: center;	
+
+	color: white;
+}
+.Vitrine_Email_Text a{
+	width: 150px; 
+
+	padding-left: 10px;
+	padding-right: 10px;
+
+	background-color: #73c9cd;
+	color: white;
+}
+.Vitrine_Email_Text a:link{
+	text-decoration: none;
+}
+.Vitrine_Email_Text a:hover{
+	animation: AnimationCouleur_2 2s;
+	background-color: #073052;
+}
+
+@keyframes AnimationCouleur {
+	0%,to{
+		background-color: #f5f6fa;
+    }
+    33%,100%{
+        background-color: #dcdde1;
+    }
+    66%{
+		background-color: black;
+       
+    }
+}
+@keyframes AnimationCouleur_2 {
+	0%{
+		background-color: #73c9cd;
+    }
+    50%{
+		background-color: #073052;
+       
+    }
+}
+
+@keyframes AnimationHautBAS{
+    20%,50%,80%,to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+	.Vitrine_QFN_Text{
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 1600px) {
+	.Vitrine{
+		width: 100%; 
+		height: 100vh;
+	}
+} 

@@ -1,0 +1,11 @@
+les clé se trouvent dans les fichiers :
+
+sk_live_AueCnJBK1jLLZn9d9EC1scfF: 
+paiement.php
+ValiderPaiement.php
+fonctions.php
+
+pk_live_AbQKB40jGT6RX36rKTfvRK0Q:
+Affpaiement.php
+
+il faut également modifier le fichier fontions.php, la partie connBDD();
