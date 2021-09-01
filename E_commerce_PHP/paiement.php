@@ -6,7 +6,7 @@ include 'fonctions.php';
 require('stripe.php');//ici on créé un customer pour stripe
 
 
-$stripe = new Stripe('sk_live_AueCnJBK1jLLZn9d9EC1scfF');
+$stripe = new Stripe('ss');
 if(isset($_GET['NouvCB']))
 {
 	$token = $_POST['stripeToken'];
